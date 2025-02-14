@@ -1,0 +1,27 @@
+solr:
+  auth:
+    enabled: false
+    adminUsername: admin
+    adminPassword: ""
+    existingSecret: ""
+    existingSecretPasswordKey: "solr-password"
+  coreNames:
+    - catplus
+  cloudEnabled: false
+  cloudBootstrap: false
+  replicaCount: 1
+  collectionReplicas: 1
+  revisionHistoryLimit: 3
+  resources:
+    requests:
+      cpu: 2
+      memory: 512Mi
+    limits:
+      cpu: 3
+      memory: 2048Mi
+  extraVolumes: []
+  extraVolumeMounts: []
+  initContainers: []
+  sidecars: []
+  persistence:
+    size: 20Gi

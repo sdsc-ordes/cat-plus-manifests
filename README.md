@@ -48,6 +48,17 @@ To edit secrets:
 2. Once the changes are made, re-encrypt them using `just secrets encrypt`.
 3. Commit changes.
 
+### Template management
+
+Some service manifests are based on external helm charts. We render these templates once from upstream and persist the rendered templates in this repository.
+Kubectl is then used with kustomize for the deployment. Periodically, we may want to refresh the rendered manifests due to updates in the upstream template.
+
+To do so, run:
+
+```shell
+just render <dir>
+```
+
 ## Contribute
 
 To be defined.

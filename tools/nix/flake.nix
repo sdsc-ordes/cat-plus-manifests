@@ -1,5 +1,5 @@
 {
-  description = "cat-plus-zarr-manifests";
+  description = "catplus-zarr-manifests";
 
   nixConfig = {
     extra-substituters = [
@@ -44,8 +44,10 @@
             bash
             coreutils
             curl
+            fd
             findutils
             git
+            kubernetes-helm
             jq
             just
             kubectl

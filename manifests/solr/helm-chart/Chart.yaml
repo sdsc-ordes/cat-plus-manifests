@@ -1,0 +1,13 @@
+apiVersion: v2
+name: solr-external
+description: A Helm chart for solr
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
+
+dependencies:
+  - name: "solr"
+    version: "9.5.3"
+    repository: "oci://registry-1.docker.io/bitnamicharts"
+    alias: "solr"
+    condition: solr.enabled

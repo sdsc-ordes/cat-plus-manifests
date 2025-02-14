@@ -5,6 +5,7 @@
 
 #env files
 .env
+
 # sops
 *.dec.yaml
 .sops.agekey

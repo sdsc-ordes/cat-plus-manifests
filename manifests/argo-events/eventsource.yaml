@@ -8,7 +8,7 @@ spec:
       # bucket information
       bucket:
         # name of the bucket
-        name: cat-plus-storage
+        name: catplus-storage
       # s3 service endpoint
       endpoint: s3-a.zhw.cloud.switch.ch
       region: ZH

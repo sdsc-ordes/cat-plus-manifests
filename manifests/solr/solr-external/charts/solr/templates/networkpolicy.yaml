@@ -1,0 +1,27 @@
+---
+# Source: solr-external/charts/solr/templates/networkpolicy.yaml
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: solr-catplus
+  namespace: "default"
+  labels:
+    app.kubernetes.io/instance: solr-catplus
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: solr
+    app.kubernetes.io/version: 9.8.0
+    helm.sh/chart: solr-9.5.3
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/instance: solr-catplus
+      app.kubernetes.io/name: solr
+  policyTypes:
+    - Ingress
+    - Egress
+  egress:
+    - {}
+  ingress:
+    - ports:
+        - port: 8983
+        - port: 8983
